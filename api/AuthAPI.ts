@@ -1,5 +1,5 @@
-import { APIRequestContext } from '@playwright/test';
-import { ENV } from '../config/env';   // 👈 ADD THIS
+import { APIRequestContext } from "@playwright/test";
+import { ENV } from "../config/env"; // 👈 ADD THIS
 
 export class AuthAPI {
   constructor(private request: APIRequestContext) {}
@@ -9,8 +9,8 @@ export class AuthAPI {
     return await this.request.post(`${ENV.apiURL}/login`, {
       data: {
         email,
-        password
-      }
+        password,
+      },
     });
   }
 }
