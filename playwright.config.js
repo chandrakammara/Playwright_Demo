@@ -1,14 +1,11 @@
-const { defineConfig } = require('@playwright/test');
-const { ENV } = require('./config/env');
+const { defineConfig } = require("@playwright/test");
+const { ENV } = require("./config/env");
 
 module.exports = defineConfig({
-
-  testDir: './tests',
+  testDir: "./tests",
 
   // Reporter setup (HTML report enabled)
-  reporter: [
-    ['html', { open: 'never' }]
-  ],
+  reporter: [["html", { open: "never" }]],
 
   use: {
     baseURL: ENV.baseURL,
@@ -16,8 +13,8 @@ module.exports = defineConfig({
     // IMPORTANT: CI-safe mode
     headless: true,
 
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    trace: 'on-first-retry',
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
+    trace: "on-first-retry",
   },
 });

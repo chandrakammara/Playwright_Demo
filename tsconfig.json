@@ -1,23 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES6",                     // Compile to modern JavaScript
-    "module": "commonjs",               // Stable module system for Playwright
-    "types": ["node"],                 // Enable Node.js globals (process, etc.)
-    
-    "strict": true,                     // Enable strict type checking
-    "esModuleInterop": true,            // Allows import compatibility
-    "skipLibCheck": true,               // Skip type checking of node_modules
-    
-    "resolveJsonModule": true,          // Allow importing JSON files
+    "target": "ES6", // Compile to modern JavaScript
+    "module": "commonjs", // Stable module system for Playwright
+    "types": ["node"], // Enable Node.js globals (process, etc.)
+
+    "strict": true, // Enable strict type checking
+    "esModuleInterop": true, // Allows import compatibility
+    "skipLibCheck": true, // Skip type checking of node_modules
+
+    "resolveJsonModule": true, // Allow importing JSON files
     "forceConsistentCasingInFileNames": true // Prevent case issues
   },
 
-  "include": [
-    "tests",
-    "pages",
-    "api",
-    "config",
-    "fixtures",
-    "utils"
-  ]
+  "include": ["tests", "pages", "api", "config", "fixtures", "utils"]
 }

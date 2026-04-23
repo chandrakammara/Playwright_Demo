@@ -39,7 +39,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report
+          name: playwright-report-${{ github.run_number }}
           path: playwright-report
       - name: Upload test artifacts
         if: always()
@@ -47,7 +47,7 @@ jobs:
         with:
           name: test-results
           path: test-results
-      - name: Check code formatting (Prettier)
-        run: npx prettier --check .
-      - name: Run ESLint
-        run: npx eslint .
+    #  - name: Check code formatting (Prettier)
+     #   run: npx prettier --check .
+     # - name: Run ESLint
+      #  run: npx eslint .

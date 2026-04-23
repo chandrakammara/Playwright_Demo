@@ -1,19 +1,16 @@
-import { APIRequestContext } from '@playwright/test';
+import { APIRequestContext } from "@playwright/test";
+import { ENV } from "../config/env"; // 👈 ADD THIS
 
 export class AuthAPI {
   constructor(private request: APIRequestContext) {}
 
+  // LOGIN API
   async login(email: string, password: string) {
-
-    return await this.request.post(`${process.env.API_URL || 'https://reqres.in/api/login'}`, {
+    return await this.request.post(`${ENV.apiURL}/login`, {
       data: {
         email,
-        password
+        password,
       },
-      headers: {
-        'Content-Type': 'application/json'
-      }
     });
   }
 }
-
