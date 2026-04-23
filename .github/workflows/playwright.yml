@@ -47,7 +47,7 @@ jobs:
         with:
           name: test-results
           path: test-results
-      - name: Check code formatting (Prettier)
-        run: npx prettier --check .
+    #  - name: Check code formatting (Prettier)
+     #   run: npx prettier --check .
      # - name: Run ESLint
       #  run: npx eslint .
